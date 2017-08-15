@@ -15,7 +15,7 @@
       line: '* hard core 0'
       state: present
       insertbefore: '^# End of file'
-    when: hard_core.rc != 0
+    when: hard_core.rc != 0 and restrict_core_dump == True
     tags:
       - section1
       - section1.5
@@ -26,7 +26,7 @@
       name: fs.suid_dumpable
       value: 0
       state: present
-    when: restrict_core_dumps == True
+    when: restrict_core_dumps == True and restrict_core_dump == True
     tags:
       - section1
       - section1.5
@@ -58,6 +58,7 @@
     apt:
       name: prelink
       state: absent
+    when: disable_prelink == True
     tags:
       - section1
       - section1.5

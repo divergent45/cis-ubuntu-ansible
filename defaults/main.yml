@@ -18,7 +18,9 @@ root_password_grub: grub.pbkdf2.sha512.10000.2EDB88EB8D897897A67D45961EFACF9878E
 root_password: $6$22JQUvbd$n9xjZ9mM4todclTzHHUyIlmlxrlXIXFS4H4baITVFqGn.hzo6o.m4lIk.3cPD.ftqkfHctBZzJxR4pSqV8MEL/ 
 # Section 01 Level 5
 # Set this flag to randomize virtual memory region placement.
+restrict_core_dump: True
 enable_aslr: True
+disable_prelink: True
 
 # Section 01 Level 6
 enable_selinux: True
