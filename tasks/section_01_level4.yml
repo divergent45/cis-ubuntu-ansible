@@ -52,7 +52,7 @@
       name: root
       state: present
       password: "{{ root_password }}"
-    when: root_password_set.rc == 0
+    when: root_password_set.rc == 0 and authentication_required_for_single_user_mode == true
     tags:
       - section1
       - section1.4
