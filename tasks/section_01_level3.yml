@@ -17,7 +17,7 @@
       minute: 0
       hour: 5
       job: "/usr/sbin/aide --check"
-    when: use_aide == True
+    when: use_aide == True and aide_scheduled_run == True
     tags:
       - section1
       - section1.3

@@ -5,6 +5,7 @@ partitioning: True
 
 # Section 01 Level 3
 use_aide: True
+aide_scheduled_run: True
 
 # Section 01 Level 4
 set_bootloader_password: false
